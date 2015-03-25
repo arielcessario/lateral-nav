@@ -1,5 +1,10 @@
 (function () {
     'use strict';
+
+    var scripts = document.getElementsByTagName("script")
+    var currentScriptPath = scripts[scripts.length-1].src;
+    console.log(currentScriptPath);
+
     angular.module('nombreapp.nav', ['ngRoute'])
         .directive('navBar', navBar);
 
@@ -12,14 +17,11 @@
             scope: {
                 menuList: '='
             },
-            templateUrl: './nav/nav.html',
+            templateUrl: currentScriptPath.replace('nav.js', 'nav.html'),
             controller: function ($scope, $compile, $http) {
 
                 var vm = this;
                 vm.closed = false;
-                this.menu_items = $scope.menuList;
-
-                console.log($scope);
 
             },
 
