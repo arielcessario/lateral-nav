@@ -1,4 +1,4 @@
-<div ng-controller="NavController as navCtrl">
+<div >
     <div class="nav-button"
          ng-click="navCtrl.closed = !navCtrl.closed;"
          ng-class="{'nav-button-transformed':navCtrl.closed}">
@@ -15,7 +15,7 @@
          ng-class="{'nav-container-closed':!navCtrl.closed}">
         <!--<div class="nav-header"></div>-->
 
-        <div ng-repeat="menu in navCtrl.menu_items"><a href="{{menu.ref}}">{{menu.name}}</a></div>
+        <div ng-repeat="menu in menuList"><a href="{{menu.ref}}">{{menu.name}}</a></div>
 
 
     </div>

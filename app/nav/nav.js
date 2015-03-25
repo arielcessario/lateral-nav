@@ -1,34 +1,30 @@
 (function () {
     'use strict';
-
     angular.module('nombreapp.nav', ['ngRoute'])
-
-        .config(['$routeProvider', function ($routeProvider) {
-            $routeProvider.when('/nav', {
-                templateUrl: './nav/nav.html',
-                controller: 'NavController'
-            });
-        }])
-
-        .controller('NavController', NavController);
+        .directive('navBar', navBar);
 
 
-    function NavController() {
+    navBar.$inject = ['$location', '$route'];
 
-        var vm = this;
-        vm.closed = false;
-        vm.menu_items = [
-            {ref:'#',name:'Inicio'},
-            {ref:'#',name:'Inicio'},
-            {ref:'#',name:'Inicio'},
-            {ref:'#',name:'Inicio'},
-            {ref:'#',name:'Inicio'}
-        ]
+    function navBar($location, $route) {
+        return {
+            restrict: 'E',
+            scope: {
+                menuList: '='
+            },
+            templateUrl: './nav/nav.html',
+            controller: function ($scope, $compile, $http) {
 
-        vm.stateNav = function(){
-            vm.closed = !vm.closed;
-            console.log(vm.closed);
-        }
+                var vm = this;
+                vm.closed = false;
+                this.menu_items = $scope.menuList;
 
+                console.log($scope);
+
+            },
+
+            controllerAs: 'navController'
+        };
     }
+
 })();
