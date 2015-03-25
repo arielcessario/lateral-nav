@@ -1,0 +1,22 @@
+<div ng-controller="NavController as navCtrl">
+    <div class="nav-button"
+         ng-click="navCtrl.closed = !navCtrl.closed;"
+         ng-class="{'nav-button-transformed':navCtrl.closed}">
+        <div ng-class="{'nav-button-top-transformed':navCtrl.closed}"></div>
+        <div ng-class="{'nav-button-mid-transformed':navCtrl.closed}"></div>
+        <div ng-class="{'nav-button-bot-transformed':navCtrl.closed}"></div>
+    </div>
+    <span class="nav-button-text"
+          ng-click="navCtrl.closed = !navCtrl.closed;"
+          ng-class="{'nav-button-text-transformed':navCtrl.closed}">Navegación</span>
+
+
+    <div class="nav-container"
+         ng-class="{'nav-container-closed':!navCtrl.closed}">
+        <!--<div class="nav-header"></div>-->
+
+        <div ng-repeat="menu in navCtrl.menu_items"><a href="{{menu.ref}}">{{menu.name}}</a></div>
+
+
+    </div>
+</div>
