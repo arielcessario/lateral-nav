@@ -1,0 +1,197 @@
+@import "compass/reset";
+
+$font-stack: Helvetica, sans-serif;
+$primary-color: #222222;
+$secondary-color: #000;
+$font-color: #fff;
+$main-width: 300px;
+$translate-sec-pos: 540px;
+$translate-sec-neg: -540px;
+$translate-btn-pos: 240px;
+$translate-btn-neg: -240px;
+$align: 'l';
+/*r= derecha; l=izquierda*/
+
+@mixin alienacion() {
+  @if $align == 'r' {
+    right: 0px;
+  } @else {
+    left: 0px;
+  }
+}
+
+@mixin btn-align() {
+  @if $align == 'r' {
+    right: 20px;
+  } @else {
+    left: 20px;
+  }
+}
+
+@mixin btn-nav-moved() {
+  @if $align == 'r' {
+    right: -400px;
+  } @else {
+    left: -400px;
+  }
+}
+
+@mixin translated() {
+  @if $align == 'r' {
+    transform: translate($main-width, 0);
+  } @else {
+    transform: translate(-$main-width, 0);
+  }
+}
+
+@mixin btn-arrow-top() {
+  @if $align == 'r' {
+    transform: translate(5px, 0px) rotate(45deg);
+  } @else {
+    transform: translate(-5px, 0px) rotate(-45deg);
+  }
+}
+
+@mixin btn-arrow-bottom() {
+  @if $align == 'r' {
+    transform: translate(5px, 0px) rotate(-45deg);
+  } @else {
+    transform: translate(-5px, 0px) rotate(45deg);
+  }
+}
+
+@mixin nav-title-translate() {
+  @if $align == 'r' {
+
+    transform: translate($translate-sec-neg, 0px) !important;
+  } @else {
+
+    transform: translate($translate-sec-pos, 0px) !important;
+  }
+}
+
+@mixin nav-btn-translate() {
+  @if $align == 'r' {
+
+    transform: translate($translate-btn-neg, 0px) !important;
+  } @else {
+
+    transform: translate($translate-btn-pos, 0px) !important;
+  }
+}
+
+.nav-container {
+  position: fixed;
+  @include alienacion();
+  top: 0px;
+  bottom: 0px;
+  width: $main-width;
+  padding-top: 60px;
+  /*background-color: #737373;*/
+  background-color: $primary-color;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.nav-header {
+  position: absolute;
+  top: 0px;
+  height: 60px;
+  background-color: $primary-color;
+}
+
+.nav-container-closed {
+  @include translated();
+}
+
+.nav-container {
+  div {
+    width: 100%;
+    text-align: right;
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-bottom-color: #ffffff;
+    .nav-lateral-main {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 20px;
+    }
+    .nav-lateral-sub {
+      font-size: 15px;
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-button {
+  /*background-color: #222222;*/
+  position: fixed;
+  top: 20px;
+  @include btn-align();
+  z-index: 15;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.nav-button span, .nav-button-text {
+  cursor: pointer;
+  font-size: 20px;
+  position: fixed;
+  top: 15px;
+  @include btn-nav-moved();
+  color: #ffffff;
+  z-index: 20;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+.nav-button-text-transformed {
+  @include nav-title-translate();
+  color: #ffffff !important;
+
+}
+
+.nav-button div {
+  cursor: pointer;
+  width: 20px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #000000;
+  margin: 2px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.nav-button-transformed {
+  @include nav-btn-translate();
+}
+
+.nav-button-top-transformed {
+  @include btn-arrow-top();
+  background-color: #ffffff !important;
+}
+
+.nav-button-mid-transformed {
+  background-color: #ffffff !important;
+
+}
+
+.nav-button-bot-transformed {
+  @include btn-arrow-bottom();
+  background-color: #ffffff !important;
+
+}

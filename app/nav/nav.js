@@ -3,7 +3,7 @@
 
     var scripts = document.getElementsByTagName("script")
     var currentScriptPath = scripts[scripts.length-1].src;
-    console.log(currentScriptPath);
+    //console.log(currentScriptPath);
 
     angular.module('nombreapp.nav', ['ngRoute'])
         .directive('navBar', navBar);

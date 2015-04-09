@@ -1,106 +1,190 @@
+/* line 5, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../var/lib/gems/2.1.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*r= derecha; l=izquierda*/
+/* line 83, nav.scss */
 .nav-container {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    width: 200px;
-    padding-top: 60px;
-    /*background-color: #737373;*/
-    background-color: #222222;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 300px;
+  padding-top: 60px;
+  /*background-color: #737373;*/
+  background-color: #222222;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
-.nav-header{
-    position: absolute;
-    top: 0px;
-    height: 60px;
-    background-color: #222222;
+/* line 99, nav.scss */
+.nav-header {
+  position: absolute;
+  top: 0px;
+  height: 60px;
+  background-color: #222222;
 }
 
+/* line 106, nav.scss */
 .nav-container-closed {
-    transform: translate(200px, 0);
+  transform: translate(-300px, 0);
 }
 
+/* line 111, nav.scss */
 .nav-container div {
-    width: 100%;
-    text-align: right;
+  width: 100%;
+  text-align: right;
+  border-style: solid;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  border-bottom-color: #ffffff;
+}
+/* line 118, nav.scss */
+.nav-container div .nav-lateral-main {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+/* line 124, nav.scss */
+.nav-container div .nav-lateral-sub {
+  font-size: 15px;
+  text-decoration: none;
 }
 
-.nav-container div a {
-    margin-right: 20px;
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 20px;
-}
-
+/* line 131, nav.scss */
 .nav-button {
-    /*background-color: #222222;*/
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 15;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
+  /*background-color: #222222;*/
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 15;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
+/* line 144, nav.scss */
 .nav-button span, .nav-button-text {
-    cursor: pointer;
-    font-size: 20px;
-    position: fixed;
-    top: 15px;
-    right: -400px;
-    color: #ffffff;
-    z-index: 20;
-    -webkit-transition: all .4s;
-    -moz-transition: all .4s;
-    -ms-transition: all .4s;
-    -o-transition: all .4s;
-    transition: all .4s;
+  cursor: pointer;
+  font-size: 20px;
+  position: fixed;
+  top: 15px;
+  left: -400px;
+  color: #ffffff;
+  z-index: 20;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
 }
 
+/* line 159, nav.scss */
 .nav-button-text-transformed {
-    transform: translate(-440px, 0px) !important;
-    color: #ffffff !important;
-
+  transform: translate(540px, 0px) !important;
+  color: #ffffff !important;
 }
 
+/* line 165, nav.scss */
 .nav-button div {
-    cursor: pointer;
-    width: 20px;
-    height: 4px;
-    border-radius: 2px;
-    background-color: #000000;
-    margin: 2px;
-    -webkit-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    -ms-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
+  cursor: pointer;
+  width: 20px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #000000;
+  margin: 2px;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
+/* line 179, nav.scss */
 .nav-button-transformed {
-    transform: translate(-140px, 0px);
+  transform: translate(240px, 0px) !important;
 }
 
+/* line 183, nav.scss */
 .nav-button-top-transformed {
-    transform: translate(5px, 0px) rotate(45deg);
-    background-color: #ffffff !important;
+  transform: translate(-5px, 0px) rotate(-45deg);
+  background-color: #ffffff !important;
 }
 
+/* line 188, nav.scss */
 .nav-button-mid-transformed {
-    background-color: #ffffff !important;
-
+  background-color: #ffffff !important;
 }
 
+/* line 193, nav.scss */
 .nav-button-bot-transformed {
-    transform: translate(5px, 0px) rotate(-45deg);
-    background-color: #ffffff !important;
-
+  transform: translate(-5px, 0px) rotate(45deg);
+  background-color: #ffffff !important;
 }
