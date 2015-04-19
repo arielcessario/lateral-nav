@@ -24,7 +24,7 @@
                 vm.closed = false;
 
                 $scope.on('$routeChangeStart', function(){
-                   vm.closed = false;
+                   vm.closed = true;
                 });
 
             },
