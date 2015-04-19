@@ -16,8 +16,11 @@
         <!--<div class="nav-header"></div>-->
 
         <div ng-repeat="menu in menuList">
-            <a class="nav-lateral-main" href="{{menu.ref}}">{{menu.name}}</a><br/>
-            <a class="nav-lateral-sub" ng-repeat="sub in menu.subs" href="{{sub.ref}}">{{sub.name}}</a><br/>
+            <a class="nav-lateral-main" href="{{menu.ref}}"
+               ng-click="navCtrl.closed = !navCtrl.closed;">{{menu.name}}</a><br/>
+            <a class="nav-lateral-sub" ng-repeat="sub in menu.subs"
+               href="{{sub.ref}}"
+               ng-click="navCtrl.closed = !navCtrl.closed;">{{sub.name}}</a><br/>
 
         </div>
 
