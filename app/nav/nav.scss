@@ -5,8 +5,8 @@ $primary-color: #ffffff;
 $secondary-color: #fff;
 $font-color: #000;
 $main-width: 300px;
-$translate-sec-pos: 540px;
-$translate-sec-neg: -540px;
+$translate-sec-pos: 500px;
+$translate-sec-neg: -500px;
 $translate-btn-pos: 240px;
 $translate-btn-neg: -240px;
 $align: 'r';
@@ -83,6 +83,7 @@ $align: 'r';
 .nav-container {
   position: fixed;
   @include alienacion();
+  box-shadow: 0px 5px 10px #adadad;
   top: 0px;
   bottom: 0px;
   width: $main-width;
@@ -120,7 +121,7 @@ $align: 'r';
     .nav-lateral-main {
       margin-right: 20px;
       text-decoration: none;
-      color: #ffffff;
+      color: $font-color;
       font-size: 20px;
     }
     .nav-lateral-sub {
@@ -160,7 +161,7 @@ $align: 'r';
 
 .nav-button-text-transformed {
   @include nav-title-translate();
-  color: #ffffff !important;
+  color: $font-color!important;
 
 }
 
@@ -184,16 +185,16 @@ $align: 'r';
 
 .nav-button-top-transformed {
   @include btn-arrow-top();
-  background-color: #ffffff !important;
+  background-color: #000000 !important;
 }
 
 .nav-button-mid-transformed {
-  background-color: #ffffff !important;
+  background-color: #000000 !important;
 
 }
 
 .nav-button-bot-transformed {
   @include btn-arrow-bottom();
-  background-color: #ffffff !important;
+  background-color: #000000 !important;
 
 }

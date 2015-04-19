@@ -23,6 +23,10 @@
                 var vm = this;
                 vm.closed = false;
 
+                $scope.on('$routeChangeStart', function(){
+                   vm.closed = false;
+                });
+
             },
 
             controllerAs: 'navController'
