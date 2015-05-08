@@ -153,7 +153,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 164, nav.scss */
 .nav-button-text-transformed {
-  transform: translate(-500px, 0px) !important;
+  transform: translate(-400px, 0px) !important;
   color: #000 !important;
 }
 
