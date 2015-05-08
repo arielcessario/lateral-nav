@@ -67,13 +67,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 83, nav.scss */
 .nav-container {
   position: fixed;
-  left: 0px;
+  right: 0px;
+  box-shadow: 0px 5px 10px #adadad;
   top: 0px;
   bottom: 0px;
   width: 300px;
   padding-top: 60px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 20;
   /*background-color: #737373;*/
-  background-color: #222222;
+  background-color: #ffffff;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
@@ -81,20 +85,21 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all 0.4s;
 }
 
-/* line 99, nav.scss */
+/* line 103, nav.scss */
 .nav-header {
+  z-index: 21;
   position: absolute;
   top: 0px;
   height: 60px;
-  background-color: #222222;
-}
-
-/* line 106, nav.scss */
-.nav-container-closed {
-  transform: translate(-300px, 0);
+  background-color: #ffffff;
 }
 
 /* line 111, nav.scss */
+.nav-container-closed {
+  transform: translate(300px, 0);
+}
+
+/* line 116, nav.scss */
 .nav-container div {
   width: 100%;
   text-align: right;
@@ -103,26 +108,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-bottom-width: 1px;
   border-bottom-color: #ffffff;
 }
-/* line 118, nav.scss */
+/* line 123, nav.scss */
 .nav-container div .nav-lateral-main {
   margin-right: 20px;
   text-decoration: none;
-  color: #ffffff;
+  color: #000;
   font-size: 20px;
 }
-/* line 124, nav.scss */
+/* line 129, nav.scss */
 .nav-container div .nav-lateral-sub {
   font-size: 15px;
   text-decoration: none;
 }
 
-/* line 131, nav.scss */
+/* line 136, nav.scss */
 .nav-button {
   /*background-color: #222222;*/
   position: fixed;
   top: 20px;
-  left: 20px;
-  z-index: 15;
+  right: 20px;
+  z-index: 22;
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -ms-transition: all 0.4s;
@@ -130,15 +135,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all 0.4s;
 }
 
-/* line 144, nav.scss */
+/* line 149, nav.scss */
 .nav-button span, .nav-button-text {
   cursor: pointer;
   font-size: 20px;
   position: fixed;
   top: 15px;
-  left: -400px;
+  right: -400px;
   color: #ffffff;
-  z-index: 20;
+  z-index: 22;
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
   -ms-transition: all .4s;
@@ -146,13 +151,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all .4s;
 }
 
-/* line 159, nav.scss */
+/* line 164, nav.scss */
 .nav-button-text-transformed {
-  transform: translate(540px, 0px) !important;
-  color: #ffffff !important;
+  transform: translate(-500px, 0px) !important;
+  color: #000 !important;
 }
 
-/* line 165, nav.scss */
+/* line 170, nav.scss */
 .nav-button div {
   cursor: pointer;
   width: 20px;
@@ -167,24 +172,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all 0.4s;
 }
 
-/* line 179, nav.scss */
+/* line 184, nav.scss */
 .nav-button-transformed {
-  transform: translate(240px, 0px) !important;
-}
-
-/* line 183, nav.scss */
-.nav-button-top-transformed {
-  transform: translate(-5px, 0px) rotate(-45deg);
-  background-color: #ffffff !important;
+  transform: translate(-240px, 0px) !important;
 }
 
 /* line 188, nav.scss */
-.nav-button-mid-transformed {
-  background-color: #ffffff !important;
+.nav-button-top-transformed {
+  transform: translate(5px, 0px) rotate(45deg);
+  background-color: #000000 !important;
 }
 
 /* line 193, nav.scss */
+.nav-button-mid-transformed {
+  background-color: #000000 !important;
+}
+
+/* line 198, nav.scss */
 .nav-button-bot-transformed {
-  transform: translate(-5px, 0px) rotate(45deg);
-  background-color: #ffffff !important;
+  transform: translate(5px, 0px) rotate(-45deg);
+  background-color: #000000 !important;
 }

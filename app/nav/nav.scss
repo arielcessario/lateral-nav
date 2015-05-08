@@ -88,6 +88,8 @@ $align: 'r';
   bottom: 0px;
   width: $main-width;
   padding-top: 60px;
+  overflow-y: auto;
+  overflow-x: hidden;
   z-index: 20;
   /*background-color: #737373;*/
   background-color: $primary-color;
