@@ -1,4 +1,4 @@
-<div >
+<div>
     <div class="nav-button"
          ng-click="navCtrl.closed = !navCtrl.closed;"
          ng-class="{'nav-button-transformed':navCtrl.closed}">
@@ -6,16 +6,17 @@
         <div ng-class="{'nav-button-mid-transformed':navCtrl.closed}"></div>
         <div ng-class="{'nav-button-bot-transformed':navCtrl.closed}"></div>
     </div>
-    <span class="nav-button-text"
-          ng-click="navCtrl.closed = !navCtrl.closed;"
-          ng-class="{'nav-button-text-transformed':navCtrl.closed}">Navegación</span>
+    <input class="nav-button-text"
+           ng-model="navCtrl.filter"
+           ng-class="{'nav-button-text-transformed':navCtrl.closed}"/>
+    <!--ng-click="navCtrl.closed = !navCtrl.closed;"-->
 
 
     <div class="nav-container"
          ng-class="{'nav-container-closed':!navCtrl.closed}">
         <!--<div class="nav-header"></div>-->
 
-        <div ng-repeat="menu in menuList">
+        <div ng-repeat="menu in menuList | filter:navCtrl.filter">
             <a class="nav-lateral-main" href="{{menu.ref}}"
                ng-click="navCtrl.closed = !navCtrl.closed;">{{menu.name}}</a><br/>
             <a class="nav-lateral-sub" ng-repeat="sub in menu.subs"
