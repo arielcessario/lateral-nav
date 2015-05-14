@@ -85,16 +85,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all 0.4s;
 }
 
-/* line 103, nav.scss */
-.nav-container-header {
-  background-color: #ffffff;
-  position: absolute;
-  height: 60px;
-  width: 100%;
-  top: 0px;
-}
-
-/* line 111, nav.scss */
+/* line 112, nav.scss */
 .nav-header {
   z-index: 21;
   position: absolute;
@@ -103,19 +94,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-color: #ffffff;
 }
 
-/* line 119, nav.scss */
+/* line 120, nav.scss */
 .nav-main-header {
   height: 30px;
   width: 100%;
   background-color: blue;
 }
 
-/* line 125, nav.scss */
+/* line 126, nav.scss */
 .nav-container-closed {
   transform: translate(300px, 0);
 }
 
-/* line 130, nav.scss */
+/* line 131, nav.scss */
 .nav-container div {
   width: 100%;
   text-align: right;
@@ -124,20 +115,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-bottom-width: 1px;
   border-bottom-color: #ffffff;
 }
-/* line 137, nav.scss */
+/* line 138, nav.scss */
 .nav-container div .nav-lateral-main {
   margin-right: 20px;
   text-decoration: none;
   color: #000;
   font-size: 20px;
 }
-/* line 143, nav.scss */
+/* line 144, nav.scss */
 .nav-container div .nav-lateral-sub {
   font-size: 15px;
   text-decoration: none;
 }
 
-/* line 150, nav.scss */
+/* line 151, nav.scss */
 .nav-button {
   /*background-color: #222222;*/
   position: fixed;
@@ -151,7 +142,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all 0.4s;
 }
 
-/* line 163, nav.scss */
+/* line 164, nav.scss */
 .nav-button span, .nav-button-text {
   cursor: pointer;
   font-size: 20px;
@@ -167,13 +158,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all .4s;
 }
 
-/* line 178, nav.scss */
+/* line 180, nav.scss */
 .nav-button-text-transformed {
   transform: translate(-400px, 0px) !important;
   color: #000 !important;
 }
 
-/* line 184, nav.scss */
+/* line 186, nav.scss */
 .nav-button div {
   cursor: pointer;
   width: 20px;
@@ -188,23 +179,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   transition: all 0.4s;
 }
 
-/* line 198, nav.scss */
+/* line 200, nav.scss */
 .nav-button-transformed {
   transform: translate(-240px, 0px) !important;
 }
 
-/* line 202, nav.scss */
+/* line 204, nav.scss */
 .nav-button-top-transformed {
   transform: translate(5px, 0px) rotate(45deg);
   background-color: #000000 !important;
 }
 
-/* line 207, nav.scss */
+/* line 209, nav.scss */
 .nav-button-mid-transformed {
   background-color: #000000 !important;
 }
 
-/* line 212, nav.scss */
+/* line 214, nav.scss */
 .nav-button-bot-transformed {
   transform: translate(5px, 0px) rotate(-45deg);
   background-color: #000000 !important;

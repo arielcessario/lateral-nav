@@ -100,13 +100,14 @@ $align: 'r';
   transition: all 0.4s;
 }
 
-.nav-container-header{
-  background-color: $primary-color;
-  position: absolute;
-  height: 60px;
-  width: 100%;
-  top: 0px;
-}
+//.nav-container-header{
+////  background-color: $primary-color;
+//  background-color: blue;
+//  position: absolute;
+//  height: 60px;
+//  width: 100%;
+//  top: 0px;
+//}
 
 .nav-header {
   z-index: 21;
@@ -174,6 +175,7 @@ $align: 'r';
   -o-transition: all .4s;
   transition: all .4s;
 }
+
 
 .nav-button-text-transformed {
   @include nav-title-translate();
