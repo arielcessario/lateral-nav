@@ -100,12 +100,26 @@ $align: 'r';
   transition: all 0.4s;
 }
 
+.nav-container-header{
+  background-color: $primary-color;
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  top: 0px;
+}
+
 .nav-header {
   z-index: 21;
   position: absolute;
   top: 0px;
   height: 60px;
   background-color: $primary-color;
+}
+
+.nav-main-header{
+  height: 30px;
+  width: 100%;
+  background-color: blue;
 }
 
 .nav-container-closed {

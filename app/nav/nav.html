@@ -1,20 +1,23 @@
 <div>
-    <div class="nav-button"
-         ng-click="navCtrl.closed = !navCtrl.closed;"
-         ng-class="{'nav-button-transformed':navCtrl.closed}">
-        <div ng-class="{'nav-button-top-transformed':navCtrl.closed}"></div>
-        <div ng-class="{'nav-button-mid-transformed':navCtrl.closed}"></div>
-        <div ng-class="{'nav-button-bot-transformed':navCtrl.closed}"></div>
-    </div>
-    <input class="nav-button-text" type="text"
-           ng-model="navCtrl.filter"
-           ng-class="{'nav-button-text-transformed':navCtrl.closed}"/>
-    <!--ng-click="navCtrl.closed = !navCtrl.closed;"-->
-
+        <div class="nav-button"
+             ng-click="navCtrl.closed = !navCtrl.closed;"
+             ng-class="{'nav-button-transformed':navCtrl.closed}">
+            <div ng-class="{'nav-button-top-transformed':navCtrl.closed}"></div>
+            <div ng-class="{'nav-button-mid-transformed':navCtrl.closed}"></div>
+            <div ng-class="{'nav-button-bot-transformed':navCtrl.closed}"></div>
+        </div>
+        <input class="nav-button-text" type="text"
+               ng-model="navCtrl.filter"
+               ng-class="{'nav-button-text-transformed':navCtrl.closed}"/>
+        <!--ng-click="navCtrl.closed = !navCtrl.closed;"-->
 
     <div class="nav-container"
          ng-class="{'nav-container-closed':!navCtrl.closed}">
         <!--<div class="nav-header"></div>-->
+
+        <div class="nav-container-header">
+
+        </div>
 
         <div ng-repeat="menu in menuList | filter:navCtrl.filter">
             <a class="nav-lateral-main" href="{{menu.ref}}"
