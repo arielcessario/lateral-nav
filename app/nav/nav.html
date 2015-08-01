@@ -1,4 +1,4 @@
-<div>
+<div ng-mouseover="navCtrl.closed = true" >
         <div class="nav-button"
              ng-click="navCtrl.closed = !navCtrl.closed;"
              ng-class="{'nav-button-transformed':navCtrl.closed}">
@@ -11,7 +11,7 @@
                ng-class="{'nav-button-text-transformed':navCtrl.closed}"/>
         <!--ng-click="navCtrl.closed = !navCtrl.closed;"-->
 
-    <div class="nav-container"
+    <div class="nav-container" ng-mouseleave="navCtrl.closed = false"
          ng-class="{'nav-container-closed':!navCtrl.closed}">
         <!--<div class="nav-header"></div>-->
 
