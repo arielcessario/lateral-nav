@@ -122,6 +122,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   color: #000;
   font-size: 20px;
 }
+.nav-container div .nav-lateral-main:hover {
+  color: #009688;
+}
 /* line 144, nav.scss */
 .nav-container div .nav-lateral-sub {
   font-size: 15px;

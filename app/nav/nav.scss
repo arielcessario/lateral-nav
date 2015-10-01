@@ -4,6 +4,7 @@ $font-stack: Helvetica, sans-serif;
 $primary-color: #ffffff;
 $secondary-color: #fff;
 $font-color: #000;
+$font-hover-color: #009688;
 $main-width: 300px;
 $translate-sec-pos: 400px;
 $translate-sec-neg: -400px;
@@ -140,6 +141,9 @@ $align: 'r';
       text-decoration: none;
       color: $font-color;
       font-size: 20px;
+    }
+    .nav-lateral-main:hover {
+      color: $font-hover-color;
     }
     .nav-lateral-sub {
       font-size: 15px;
